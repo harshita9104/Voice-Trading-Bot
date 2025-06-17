@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voice Trading Bot</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- This application uses web-based voice interaction  -->
+   
+    <script src="https://cdn.bland.ai/bland-sdk.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>🎙️  Voice Trading Bot</h1>
+        <p>🌐 Browser-Based OTC Digital Asset Trading </p>
+        <small style="opacity: 0.8"
+          >Uses your computer's microphone only</small
+        >
+      </header>
+
+      <div class="main-content">
+        <!-- Web Interface Indicator -->
+        <div class="web-interface-indicator">
+           Web-Based Voice Interface 
+        </div>
+
+        <div class="control-panel">
+          <button id="startCall" class="btn btn-primary">
+            <span class="icon">🎙️</span>
+            Start Web Voice Session
+          </button>
+          <button id="stopCall" class="btn btn-danger" disabled>
+            <span class="icon">🔇</span>
+            End Voice Session
+          </button>
+        </div>
+
+        <div class="status-panel">
+          <div id="callStatus" class="status-item">
+            <span class="label">Web Interface Status:</span>
+            <span id="statusText" class="value">Ready for Voice Input</span>
+          </div>
+          <div id="currentStep" class="status-item">
+            <span class="label">Trading Step:</span>
+            <span id="stepText" class="value">Not Started</span>
+          </div>
+        </div>
+
+        <!-- Enhanced microphone status indicator -->
+        <div class="mic-status">
+          <div id="micIndicator" class="mic-indicator inactive"></div>
+          <span id="micStatus"></span> Web Microphone active</span>
+        </div>
+
+        <div class="transcript-panel">
+          <h3> Web Voice Conversation </h3>
+          <div id="transcript" class="transcript-content">
+            <p class="system-message">
+              🎙️ Click "Start Web Voice Session" to begin browser-based OTC
+              trading...
+            </p>
+          </div>
+        </div>
+
+        <div class="order-summary" id="orderSummary" style="display: none">
+          <h3> Order Summary (Web Voice Interface)</h3>
+          <div id="orderDetails" class="order-details"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
